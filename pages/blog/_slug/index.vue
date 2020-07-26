@@ -1,8 +1,8 @@
 <template>
-  <div class="prose">
+  <main class="post">
     <h1>{{ title }}</h1>
-    <main v-html="body" />
-  </div>
+    <div v-html="body" />
+  </main>
 </template>
 
 <script>
@@ -48,8 +48,8 @@ export default {
 </script>
 
 <style lang="scss">
-.prose {
-  width: 75%;
+.post {
+  width: 60%;
   margin: 0 auto;
 }
 </style>

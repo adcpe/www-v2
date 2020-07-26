@@ -22,8 +22,8 @@ export default {
   },
   css: ['@/assets/css/main.scss'],
   components: true,
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
-  modules: ['nuxt-webfontloader'],
+  buildModules: ['@nuxtjs/eslint-module'],
+  modules: ['@nuxtjs/bulma', 'nuxt-webfontloader'],
   build: {
     postcss: {
       preset: {
