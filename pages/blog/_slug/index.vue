@@ -7,8 +7,8 @@
 
 <script>
 import groq from 'groq'
-import renderMD from '../../plugins/markdown'
-import sanity from '../../plugins/sanity'
+import renderMD from '../../../plugins/markdown'
+import sanity from '../../../plugins/sanity'
 
 const query = groq`
   *[_type == 'post' && slug.current == $slug]

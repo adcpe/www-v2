@@ -3,7 +3,7 @@
     <main>
       <ul>
         <li v-for="(post, index) in posts" :key="index">
-          <nuxt-link :to="{ path: post.slug }">
+          <nuxt-link :to="{ path: `/blog/${post.slug}` }">
             <div class="content">
               {{ post.title }}
             </div>
