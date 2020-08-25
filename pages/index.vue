@@ -1,42 +1,36 @@
 <template>
   <div class="container">
+    <Menu class="menu" />
     <main>
-      <ul>
-        <li v-for="(post, index) in posts" :key="index">
-          <nuxt-link :to="{ path: `/blog/${post.slug}` }">
-            <div class="content">
-              {{ post.title }}
-            </div>
-          </nuxt-link>
-        </li>
-      </ul>
+      <h1>hello world</h1>
     </main>
   </div>
 </template>
 
 <script>
-import groq from 'groq'
-import sanity from '../plugins/sanity'
+import Menu from '../components/Menu'
 
 export default {
-  async asyncData() {
-    const query = groq`
-    *[_type == 'post'] {title, 'slug': slug.current} | order(publishedAt desc)
-    `
-
-    const posts = await sanity.fetch(query, {})
-    return { posts }
-  },
+  components: { Menu },
 }
 </script>
 
 <style lang="scss">
 .container {
-  margin: 0 auto;
+  margin: 0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  min-width: 100vw;
+  display: grid;
+  grid-template-areas: 'menu main';
+  grid-template-columns: 33% 1fr;
+}
+
+.menu {
+  grid-area: 'menu';
+}
+
+.main {
+  grid-area: 'main';
+  margin: 0 auto;
 }
 </style>
