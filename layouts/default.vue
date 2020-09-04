@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar />
     <Nuxt />
     <Footer />
   </div>
@@ -7,16 +8,19 @@
 
 <script>
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 export default {
   components: {
     Footer,
+    Navbar,
   },
 }
 </script>
 
 <style>
 html {
+  min-height: 100vh;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;

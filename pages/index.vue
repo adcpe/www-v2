@@ -1,36 +1,32 @@
 <template>
-  <div class="container">
-    <Menu class="menu" />
-    <main>
-      <h1>hello world</h1>
-    </main>
-  </div>
+  <main>
+    <div>
+      <h1>Andrés Del Carpio</h1>
+      <h2>Full Stack Web Developer</h2>
+    </div>
+    <div>github gitlab twitter linkedin</div>
+  </main>
 </template>
 
 <script>
-import Menu from '../components/Menu'
-
-export default {
-  components: { Menu },
-}
+export default {}
 </script>
 
 <style lang="scss">
-.container {
-  margin: 0;
-  min-height: 100vh;
-  min-width: 100vw;
-  display: grid;
-  grid-template-areas: 'menu main';
-  grid-template-columns: 33% 1fr;
-}
-
-.menu {
-  grid-area: 'menu';
-}
-
-.main {
-  grid-area: 'main';
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   margin: 0 auto;
+  min-height: 80vh;
+  width: 768px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
 }
 </style>
