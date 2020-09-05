@@ -17,26 +17,16 @@
 import groq from 'groq'
 import sanity from '../../plugins/sanity'
 
-export default {
-  async asyncData() {
-    const query = groq`
+const query = groq`
     *[_type == 'post'] {title, 'slug': slug.current} | order(publishedAt desc)
     `
 
+export default {
+  async asyncData() {
     const posts = await sanity.fetch(query, {})
 
     return { posts }
   },
-  data: () => {
-    return { posts: {} }
-  },
-  // async beforeMount() {
-  //   const query = groq`
-  //   *[_type == 'post'] {title, 'slug': slug.current} | order(publishedAt desc)
-  //   `
-
-  //   this.posts = await sanity.fetch(query, {})
-  // },
 }
 </script>
 
