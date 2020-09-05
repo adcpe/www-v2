@@ -4,7 +4,12 @@
       <h1>Andrés Del Carpio</h1>
       <h2>Full Stack Web Developer</h2>
     </div>
-    <div>github gitlab twitter linkedin</div>
+    <div>
+      <a href="https://github.com/andres-dc">github</a>
+      <a href="https://gitlab.com/andres-dc">gitlab</a>
+      <a href="https://twitter.com/Andres__DC">twitter</a>
+      <a href="https://www.linkedin.com/in/andres-dc/">linkedin</a>
+    </div>
   </main>
 </template>
 

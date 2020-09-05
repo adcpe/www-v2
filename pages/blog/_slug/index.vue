@@ -1,7 +1,7 @@
 <template>
   <main class="post">
     <h1>{{ title }}</h1>
-    <div v-html="body" />
+    <div class="md" v-html="body" />
   </main>
 </template>
 
@@ -49,7 +49,36 @@ export default {
 
 <style lang="scss">
 .post {
-  width: 60%;
+  width: 768px;
   margin: 0 auto;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.md {
+  text-align: left;
+
+  * {
+    margin: 1rem auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+    // text-align: center;
+    font-weight: bold;
+  }
+
+  pre {
+    width: 90%;
+    // margin: 1rem auto;
+  }
 }
 </style>
