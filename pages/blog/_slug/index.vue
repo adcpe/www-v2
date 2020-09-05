@@ -50,7 +50,6 @@ export default {
 <style lang="scss">
 .post {
   width: 768px;
-  margin: 0 auto;
 
   h1 {
     font-size: 2rem;
@@ -72,13 +71,11 @@ export default {
   h5,
   h6 {
     font-size: 1.5rem;
-    // text-align: center;
     font-weight: bold;
   }
 
   pre {
     width: 90%;
-    // margin: 1rem auto;
   }
 }
 </style>
