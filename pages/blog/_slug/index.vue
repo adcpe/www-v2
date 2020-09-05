@@ -42,7 +42,7 @@ export default {
   },
   beforeMount() {},
   head() {
-    return { title: `${this.title} | Andrés DC` }
+    return { title: `${this.title} | Andrés Del Carpio` }
   },
 }
 </script>
