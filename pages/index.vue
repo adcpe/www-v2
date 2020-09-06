@@ -5,16 +5,22 @@
       <h2>Full Stack Web Developer</h2>
     </div>
     <div>
-      <a href="https://github.com/andres-dc">github</a>
-      <a href="https://gitlab.com/andres-dc">gitlab</a>
-      <a href="https://twitter.com/Andres__DC">twitter</a>
-      <a href="https://www.linkedin.com/in/andres-dc/">linkedin</a>
+      <a v-for="link in links" :key="link.title" :href="link.url">
+        {{ link.title.toLowerCase() }}
+      </a>
     </div>
   </main>
 </template>
 
 <script>
-export default {}
+import socials from '../static/socials.json'
+
+export default {
+  asyncData() {
+    const links = socials.data
+    return { links }
+  },
+}
 </script>
 
 <style lang="scss">

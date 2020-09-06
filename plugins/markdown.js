@@ -5,6 +5,7 @@ import 'highlight.js/styles/atelier-sulphurpool-light.css'
 const md = new MarkdownIt({
   html: true,
   typographer: true,
+  linkify: true,
   highlight: (str, lang) => {
     if (lang && HLJS.getLanguage(lang)) {
       return (
@@ -15,9 +16,7 @@ const md = new MarkdownIt({
     }
 
     return (
-      '<pre class="hljs"><code class="font-mono">' +
-      md.utils.escapeHtml(str) +
-      '</code></pre>'
+      '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>'
     )
   },
 })

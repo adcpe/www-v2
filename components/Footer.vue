@@ -41,7 +41,8 @@ footer {
   align-items: center;
   flex-direction: row;
   text-align: center;
-  margin: 2rem auto;
+  padding: 2rem 0;
+  border-top: 1px solid #a109f6;
 }
 
 .link {

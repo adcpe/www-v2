@@ -22,6 +22,9 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .nav-right {
