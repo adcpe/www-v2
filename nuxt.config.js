@@ -20,10 +20,12 @@ export default {
     ],
     // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  css: ['@/assets/css/main.scss'],
+  styleResources: {
+    scss: ['./assets/styles/*.scss'],
+  },
   components: true,
   buildModules: ['@nuxtjs/eslint-module'],
-  modules: ['@nuxtjs/bulma', 'nuxt-webfontloader'],
+  modules: ['@nuxtjs/style-resources'],
   build: {
     postcss: {
       preset: {
@@ -31,11 +33,6 @@ export default {
           customProperties: false,
         },
       },
-    },
-  },
-  webfontloader: {
-    google: {
-      families: ['Roboto', 'Roboto Slab', 'IBM Plex Mono'],
     },
   },
 }

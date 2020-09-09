@@ -1,14 +1,18 @@
 <template>
   <main>
     <div>
-      <h2>Latest</h2>
-      <ul>
-        <li v-for="(post, index) in posts" :key="index">
-          <nuxt-link :to="{ path: `/blog/${post.slug}` }">
-            <div>{{ post.title }}</div>
-          </nuxt-link>
-        </li>
-      </ul>
+      <h1>Latest</h1>
+      <nuxt-link
+        v-for="(post, index) in posts"
+        :key="index"
+        :to="{ path: `/blog/${post.slug}` }"
+      >
+        <div class="post-link">
+          <h1>{{ post.title }}</h1>
+          <span>{{ post.publishedAt }}</span>
+          <span>{{ post.updatedAt }}</span>
+        </div>
+      </nuxt-link>
     </div>
   </main>
 </template>
@@ -18,7 +22,7 @@ import groq from 'groq'
 import sanity from '../../plugins/sanity'
 
 const query = groq`
-    *[_type == 'post'] {title, 'slug': slug.current} | order(publishedAt desc)
+    *[_type == 'post'] {title, 'slug': slug.current, publishedAt, updatedAt} | order(publishedAt desc)
     `
 
 export default {
@@ -30,4 +34,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.post-link {
+  color: black;
+  margin: 1rem auto;
+  padding: 1rem 3rem;
+  border: 1px black solid;
+}
+</style>

@@ -15,7 +15,7 @@ a {
 }
 
 .logo-img {
-  filter: grayscale(100%);
+  filter: sepia(50%);
   transition-duration: 0.25s;
 
   &:hover {

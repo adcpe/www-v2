@@ -1,40 +1,36 @@
 <template>
   <footer>
     <a
-      class="link"
+      class="link logo-img"
       href="https://nuxtjs.org/"
       target="_blank"
       rel="noopener noreferrer"
       title="Built with Nuxt"
     >
-      <img class="logo" src="../assets/images/nuxt.svg" alt="Nuxt" />
+      <img class="logo-img" src="~assets/images/nuxt.svg" alt="Nuxt" />
     </a>
     <a
-      class="link"
+      class="link logo-img"
       href="https://github.com/andres-dc"
       target="_blank"
       rel="noopener noreferrer"
       title="Code available on Github"
     >
-      <img class="logo" src="../assets/images/github.svg" alt="Github" />
+      <img class="logo-img" src="~assets/images/github.svg" alt="Github" />
     </a>
     <a
-      class="link"
+      class="link logo-img"
       href="https://www.netlify.com/"
       target="_blank"
       rel="noopener noreferrer"
       title="Hosted on Netlify"
     >
-      <img class="logo" src="../assets/images/netlify.svg" alt="Netlify" />
+      <img class="logo-img" src="~assets/images/netlify.svg" alt="Netlify" />
     </a>
   </footer>
 </template>
 
-<script>
-export default {}
-</script>
-
-<style scoped>
+<style lang="scss" scoped>
 footer {
   display: flex;
   justify-content: center;
@@ -42,7 +38,6 @@ footer {
   flex-direction: row;
   text-align: center;
   padding: 2rem 0;
-  border-top: 1px solid #a109f6;
 }
 
 .link {
@@ -50,7 +45,7 @@ footer {
   padding: 1rem;
 }
 
-.logo {
+.logo-img {
   height: 2rem;
 }
 </style>
