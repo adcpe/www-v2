@@ -49,9 +49,12 @@ export default {
 
 <style lang="scss">
 .post {
+  margin: 2rem auto;
   width: 768px;
 
   h1 {
+    margin: 0 0 2rem;
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
   }

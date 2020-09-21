@@ -1,10 +1,14 @@
 <template>
   <main>
     <div>
-      <h1>Hi, my name is <span class="my-name">Andrés Del Carpio</span></h1>
+      <h1>
+        Hi, my name is
+        <span class="my-name">Andrés Del Carpio</span>
+      </h1>
       <h2>I'm a full-stack web developer</h2>
     </div>
     <div class="logos">
+      <!-- <h1>Skills</h1> -->
       <img
         src="../assets/images/ruby.svg"
         alt="Ruby"
@@ -30,9 +34,9 @@
         class="logo-img"
       />
       <img
-        src="../assets/images/vue.svg"
-        alt="Vue"
-        title="Vue"
+        src="../assets/images/vuejs.svg"
+        alt="Vue.js"
+        title="Vue.js"
         class="logo-img"
       />
       <img
