@@ -1,7 +1,7 @@
 <template>
-  <main>
-    <div>
-      <h1>Latest</h1>
+  <div class="blog-posts">
+    <h1>Latest Blog Posts</h1>
+    <div class="post-links">
       <nuxt-link
         v-for="(post, index) in posts"
         :key="index"
@@ -14,7 +14,7 @@
         </div>
       </nuxt-link>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -34,11 +34,31 @@ export default {
 }
 </script>
 
-<style>
-.post-link {
-  color: black;
-  margin: 1rem auto;
-  padding: 1rem 3rem;
-  border: 1px black solid;
+<style lang="scss" scoped>
+.blog-posts {
+  margin: 3rem auto;
+  width: 80%;
+
+  & > h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .post-links {
+    margin: 0 auto;
+    width: 80%;
+
+    .post-link {
+      color: black;
+      margin: 1rem auto;
+      padding: 1rem 3rem;
+      border: 1px black solid;
+
+      &:hover {
+        color: #f48498;
+        border: 1px #f48498 solid;
+      }
+    }
+  }
 }
 </style>

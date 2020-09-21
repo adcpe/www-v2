@@ -1,7 +1,9 @@
 <template>
   <div class="app">
     <Navbar class="navbar" />
-    <Nuxt class="nuxt" />
+    <main>
+      <Nuxt class="nuxt" />
+    </main>
     <Footer class="footer" />
   </div>
 </template>
@@ -19,6 +21,13 @@ export default {
 </script>
 
 <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .app {
   min-height: 100vh;
   font-size: 16px;
@@ -32,11 +41,9 @@ export default {
   background: #f9f8f8;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+main {
+  margin: 0 auto;
+  width: 80%;
 }
 
 @media screen and (max-width: 767px) {

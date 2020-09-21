@@ -1,8 +1,8 @@
 <template>
-  <main class="post">
+  <div class="post">
     <h1>{{ title }}</h1>
     <div class="md" v-html="body" />
-  </main>
+  </div>
 </template>
 
 <script>
