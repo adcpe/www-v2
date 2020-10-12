@@ -7,7 +7,7 @@
       rel="noopener noreferrer"
       title="Built with Nuxt"
     >
-      <img class="logo-img" src="~assets/images/nuxt.svg" alt="Nuxt" />
+      <img class="logo-img" src="/images/nuxt.svg" alt="Nuxt" />
     </a>
     <a
       class="link logo-img"
@@ -16,7 +16,7 @@
       rel="noopener noreferrer"
       title="Code available on Github"
     >
-      <img class="logo-img" src="~assets/images/github.svg" alt="Github" />
+      <img class="logo-img" src="/images/github.svg" alt="Github" />
     </a>
     <a
       class="link logo-img"
@@ -25,7 +25,7 @@
       rel="noopener noreferrer"
       title="Hosted on Netlify"
     >
-      <img class="logo-img" src="~assets/images/netlify.svg" alt="Netlify" />
+      <img class="logo-img" src="/images/netlify.svg" alt="Netlify" />
     </a>
   </footer>
 </template>

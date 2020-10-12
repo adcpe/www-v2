@@ -1,44 +1,29 @@
 <template>
   <div class="logos">
     <!-- <h1>Skills</h1> -->
+    <img src="/images/ruby.svg" alt="Ruby" title="Ruby" class="logo-img" />
     <img
-      src="../assets/images/ruby.svg"
-      alt="Ruby"
-      title="Ruby"
-      class="logo-img"
-    />
-    <img
-      src="../assets/images/rails.svg"
+      src="/images/rails.svg"
       alt="Ruby on Rails"
       title="Ruby on Rails"
       class="logo-img"
     />
     <img
-      src="../assets/images/javascript.svg"
+      src="/images/javascript.svg"
       alt="JavaScript"
       title="JavaScript"
       class="logo-img"
     />
     <img
-      src="../assets/images/nodejs.svg"
+      src="/images/nodejs.svg"
       alt="Node.js"
       title="Node.js"
       class="logo-img"
     />
+    <img src="/images/vuejs.svg" alt="Vue.js" title="Vue.js" class="logo-img" />
+    <img src="/images/react.svg" alt="React" title="React" class="logo-img" />
     <img
-      src="../assets/images/vuejs.svg"
-      alt="Vue.js"
-      title="Vue.js"
-      class="logo-img"
-    />
-    <img
-      src="../assets/images/react.svg"
-      alt="React"
-      title="React"
-      class="logo-img"
-    />
-    <img
-      src="../assets/images/postgresql.svg"
+      src="/images/postgresql.svg"
       alt="PostgreSQL"
       title="PostgreSQL"
       class="logo-img"
