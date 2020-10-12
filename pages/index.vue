@@ -6,57 +6,23 @@
         <span class="my-name">Andrés Del Carpio</span>
       </h1>
       <h2>I'm a full-stack web developer</h2>
+      <p>
+        I'm looking for my first developer job. I write about things that
+        interest me and I hope that they can be helpful to others.
+      </p>
     </div>
-    <div class="logos">
-      <!-- <h1>Skills</h1> -->
-      <img
-        src="../assets/images/ruby.svg"
-        alt="Ruby"
-        title="Ruby"
-        class="logo-img"
-      />
-      <img
-        src="../assets/images/rails.svg"
-        alt="Ruby on Rails"
-        title="Ruby on Rails"
-        class="logo-img"
-      />
-      <img
-        src="../assets/images/javascript.svg"
-        alt="JavaScript"
-        title="JavaScript"
-        class="logo-img"
-      />
-      <img
-        src="../assets/images/nodejs.svg"
-        alt="Node.js"
-        title="Node.js"
-        class="logo-img"
-      />
-      <img
-        src="../assets/images/vuejs.svg"
-        alt="Vue.js"
-        title="Vue.js"
-        class="logo-img"
-      />
-      <img
-        src="../assets/images/react.svg"
-        alt="React"
-        title="React"
-        class="logo-img"
-      />
-      <img
-        src="../assets/images/postgresql.svg"
-        alt="PostgreSQL"
-        title="PostgreSQL"
-        class="logo-img"
-      />
-    </div>
+    <Logos />
   </div>
 </template>
 
 <script>
-export default {}
+import Logos from '../components/Logos'
+
+export default {
+  components: {
+    Logos,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -82,15 +48,6 @@ export default {}
 
   .my-name {
     color: #ff8600;
-  }
-}
-
-.logos {
-  margin-top: 3rem;
-  img {
-    height: 2rem;
-    margin: 0 1rem;
-    user-select: none;
   }
 }
 
