@@ -1,7 +1,7 @@
 <template>
   <footer>
     <a
-      class="link logo-img"
+      class="link"
       href="https://nuxtjs.org/"
       target="_blank"
       rel="noopener noreferrer"
@@ -10,7 +10,7 @@
       <img class="logo-img" src="/images/nuxt.svg" alt="Nuxt" />
     </a>
     <a
-      class="link logo-img"
+      class="link"
       href="https://github.com/andres-dc"
       target="_blank"
       rel="noopener noreferrer"
@@ -19,7 +19,7 @@
       <img class="logo-img" src="/images/github.svg" alt="Github" />
     </a>
     <a
-      class="link logo-img"
+      class="link"
       href="https://www.netlify.com/"
       target="_blank"
       rel="noopener noreferrer"
@@ -31,7 +31,8 @@
 </template>
 
 <style lang="scss" scoped>
-footer {
+footer,
+.link {
   display: flex;
   justify-content: center;
   align-items: center;
