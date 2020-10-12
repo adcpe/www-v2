@@ -1,6 +1,10 @@
 <template>
   <div class="post">
     <h1>{{ title }}</h1>
+    <p>
+      <b>Posted</b> {{ publishedAt }}
+      <span v-if="updatedAt"> <b>Updated on</b> {{ updatedAt }}</span>
+    </p>
     <div class="md" v-html="body" />
   </div>
 </template>
@@ -9,6 +13,7 @@
 import groq from 'groq'
 import renderMD from '../../../plugins/markdown'
 import sanity from '../../../plugins/sanity'
+import formatDate from '../../../plugins/formatDate'
 
 const query = groq`
   *[_type == 'post' && slug.current == $slug]
@@ -39,6 +44,8 @@ export default {
   },
   created() {
     this.body = renderMD(this.body)
+    this.publishedAt = formatDate(this.publishedAt)
+    if (this.updatedAt) this.updatedAt = formatDate(this.updatedAt)
   },
   beforeMount() {},
   head() {
@@ -52,11 +59,16 @@ export default {
   margin: 2rem auto;
   width: 768px;
 
-  h1 {
-    margin: 0 0 2rem;
+  & > h1 {
+    margin: 0;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+  }
+
+  & > p {
+    text-align: center;
+    margin: 0 0 2rem;
   }
 }
 

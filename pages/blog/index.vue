@@ -9,9 +9,9 @@
       >
         <div class="post-link">
           <h1>{{ post.title }}</h1>
-          <span>{{ formatDate(post.publishedAt) }}</span>
+          <span><b>Posted</b> {{ formatDate(post.publishedAt) }}</span>
           <span v-if="post.updatedAt">
-            <b>Updated on</b> {{ formatDate(post.updatedAt) }}</span
+            <b>Updated</b> {{ formatDate(post.updatedAt) }}</span
           >
         </div>
       </nuxt-link>
@@ -22,6 +22,7 @@
 <script>
 import groq from 'groq'
 import sanity from '../../plugins/sanity'
+import formatDate from '../../plugins/formatDate'
 
 const query = groq`
     *[_type == 'post'] {title, 'slug': slug.current, publishedAt, updatedAt} | order(publishedAt desc)
@@ -34,30 +35,7 @@ export default {
     return { posts }
   },
   methods: {
-    formatDate: (date) => {
-      const months = [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ]
-
-      const d = new Date(Date.parse(date))
-
-      const year = d.getUTCFullYear()
-      const month = d.getUTCMonth()
-      const day = d.getUTCDate()
-
-      return `${months[month]} ${day}, ${year}`
-    },
+    formatDate: (date) => formatDate(date),
   },
 }
 </script>
