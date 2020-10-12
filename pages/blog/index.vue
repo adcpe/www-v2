@@ -9,8 +9,10 @@
       >
         <div class="post-link">
           <h1>{{ post.title }}</h1>
-          <span>{{ post.publishedAt }}</span>
-          <span>{{ post.updatedAt }}</span>
+          <span>{{ formatDate(post.publishedAt) }}</span>
+          <span v-if="post.updatedAt">
+            <b>Updated on</b> {{ formatDate(post.updatedAt) }}</span
+          >
         </div>
       </nuxt-link>
     </div>
@@ -30,6 +32,32 @@ export default {
     const posts = await sanity.fetch(query, {})
 
     return { posts }
+  },
+  methods: {
+    formatDate: (date) => {
+      const months = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ]
+
+      const d = new Date(Date.parse(date))
+
+      const year = d.getUTCFullYear()
+      const month = d.getUTCMonth()
+      const day = d.getUTCDate()
+
+      return `${months[month]} ${day}, ${year}`
+    },
   },
 }
 </script>
@@ -52,11 +80,9 @@ export default {
       color: black;
       margin: 1rem auto;
       padding: 1rem 3rem;
-      border: 1px black solid;
 
       &:hover {
         color: #f48498;
-        border: 1px #f48498 solid;
       }
     }
   }
