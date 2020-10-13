@@ -56,8 +56,16 @@ export default {
 
     .post-link {
       color: black;
-      margin: 1rem auto;
-      padding: 1rem 3rem;
+      margin: 0.5rem auto;
+      padding: 0.5rem 3rem;
+
+      & > h1 {
+        font-size: 1.2rem;
+      }
+
+      & > span {
+        font-size: 0.9rem;
+      }
 
       &:hover {
         color: #f48498;
