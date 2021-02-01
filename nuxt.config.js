@@ -5,7 +5,6 @@ export default {
     SANITY_ID: process.env.SANITY_ID,
     SANITY_TOKEN: process.env.SANITY_TOKEN,
   },
-  mode: 'universal',
   target: 'static',
   head: {
     title: 'Andrés Del Carpio',
