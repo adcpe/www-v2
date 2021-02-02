@@ -23,7 +23,7 @@ export default {
     scss: ['./assets/styles/*.scss'],
   },
   components: true,
-  buildModules: ['@nuxtjs/eslint-module'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
   modules: ['@nuxtjs/style-resources'],
   build: {
     postcss: {
