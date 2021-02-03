@@ -29,7 +29,7 @@ export default {
       body: null,
     }
   },
-  beforeMount() {
+  mounted() {
     this.title = document.querySelector('#postTitle').innerHTML
     this.body = renderMD(this.post.body)
   },
