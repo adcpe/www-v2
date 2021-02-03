@@ -1,10 +1,12 @@
 <template>
-  <div class="app">
-    <Navbar class="navbar" />
-    <main>
-      <Nuxt class="nuxt" />
-    </main>
-    <Footer class="footer" />
+  <div class="min-h-screen bg-bggray border-4 border-black rounded m-1">
+    <div class="min-h-full container-auto mx-auto">
+      <Navbar />
+      <main>
+        <Nuxt />
+      </main>
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -19,33 +21,3 @@ export default {
   },
 }
 </script>
-
-<style>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.app {
-  min-height: 100vh;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  color: #321325;
-  background: #f9f8f8;
-}
-
-main {
-  margin: 0 auto;
-  width: 80%;
-}
-
-@media screen and (max-width: 767px) {
-}
-</style>

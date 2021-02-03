@@ -1,9 +1,11 @@
 require('dotenv').config()
 
 export default {
-  env: {
-    SANITY_ID: process.env.SANITY_ID,
-    SANITY_TOKEN: process.env.SANITY_TOKEN,
+  privateRuntimeConfig: {
+    sanity: {
+      projectId: process.env.SANITY_ID,
+      token: process.env.SANITY_TOKEN,
+    },
   },
   target: 'static',
   head: {
@@ -17,13 +19,17 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
   styleResources: {
     scss: ['./assets/styles/*.scss'],
   },
   components: true,
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/sanity',
+  ],
   modules: ['@nuxtjs/style-resources'],
   build: {
     postcss: {

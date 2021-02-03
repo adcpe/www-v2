@@ -9,9 +9,9 @@
       >
         <div class="post-link">
           <h1>{{ post.title }}</h1>
-          <span><b>Posted</b> {{ formatDate(post.publishedAt) }}</span>
-          <span v-if="post.updatedAt">
-            <b>Updated</b> {{ formatDate(post.updatedAt) }}</span
+          <span><b>Posted</b> {{ formatDate(post.publishedOn) }}</span>
+          <span v-if="post.updatedOn">
+            <b>Updated</b> {{ formatDate(post.updatedOn) }}</span
           >
         </div>
       </nuxt-link>
@@ -20,17 +20,15 @@
 </template>
 
 <script>
-import groq from 'groq'
-import sanity from '../../plugins/sanity'
+import { groq } from '@nuxtjs/sanity'
+// import groq from 'groq'
+// import sanity from '../../plugins/sanity'
 import formatDate from '../../plugins/formatDate'
 
-const query = groq`
-    *[_type == 'post'] {title, 'slug': slug.current, publishedAt, updatedAt} | order(publishedAt desc)
-    `
-
 export default {
-  async asyncData() {
-    const posts = await sanity.fetch(query, {})
+  async asyncData({ $sanity }) {
+    const query = groq`*[_type == 'post'] {title, 'slug': slug.current, publishedOn, updatedOn} | order(publishedOn desc)`
+    const posts = await $sanity.fetch(query)
 
     return { posts }
   },

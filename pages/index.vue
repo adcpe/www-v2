@@ -1,14 +1,15 @@
 <template>
-  <div class="main">
-    <div>
-      <h1>
-        Hi, my name is
-        <span class="my-name">Andrés Del Carpio</span>
+  <div class="container-sm font-lato flex flex-col justify-center items-center">
+    <div class="h-96 w-3/4 flex flex-col justify-center items-start">
+      <h1 class="text-4xl m-3">
+        I'm
+        <span class="font-titillium font-bold text-name"
+          >Andrés Del Carpio</span
+        >
       </h1>
-      <h2>I'm a full-stack web developer</h2>
-      <p>
-        I'm looking for my first developer job. I write about things that
-        interest me and I hope that they can be helpful to others.
+      <p class="font-lato text-2xl m-3">
+        I'm a full-stack developer. I write about things that interest me and I
+        hope that they can be helpful to others.
       </p>
     </div>
     <Logos />
@@ -24,36 +25,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 auto;
-  min-height: 80vh;
-  width: 768px;
-
-  h1,
-  h2 {
-    margin: 1rem auto;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    font-weight: bold;
-  }
-
-  .my-name {
-    color: #ff8600;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  main {
-    width: 100%;
-  }
-}
-</style>

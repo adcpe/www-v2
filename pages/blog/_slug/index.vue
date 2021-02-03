@@ -1,53 +1,43 @@
 <template>
   <div class="post">
-    <h1>{{ title }}</h1>
+    <h1 id="postTitle">{{ post.title }}</h1>
     <p>
-      <b>Posted</b> {{ publishedAt }}
-      <span v-if="updatedAt"> <b>Updated on</b> {{ updatedAt }}</span>
+      <b>Posted</b> {{ date(post.publishedOn) }}
+      <span v-if="post.updatedAt">
+        <b>Updated</b> {{ date(post.updatedOn) }}
+      </span>
     </p>
     <div class="md" v-html="body" />
   </div>
 </template>
 
 <script>
-import groq from 'groq'
-import renderMD from '../../../plugins/markdown'
-import sanity from '../../../plugins/sanity'
-import formatDate from '../../../plugins/formatDate'
-
-const query = groq`
-  *[_type == 'post' && slug.current == $slug]
-    {
-      title, body, publishedAt, updatedAt, 'slug': slug.current
-    }[0]
-`
+import { groq } from '@nuxtjs/sanity'
+import formatDate from '@/plugins/formatDate'
+import renderMD from '@/plugins/markdown'
 
 export default {
-  async asyncData({ params }) {
-    const post = await sanity.fetch(query, params)
-    return {
-      title: post.title,
-      body: post.body,
-      publishedAt: post.publishedAt,
-      updatedAt: post.updatedAt,
-      slug: post.slug,
-    }
+  async asyncData({ params, $sanity }) {
+    const query = groq`*[_type == 'post' && slug.current == '${params.slug}']{ title, body, publishedOn, updatedOn, 'slug': slug.current }[0]`
+    const post = await $sanity.fetch(query)
+
+    return { post }
   },
   data() {
     return {
-      body: null,
       title: null,
-      publishedAt: null,
-      updatedAt: null,
-      slug: null,
+      body: null,
     }
   },
-  created() {
-    this.body = renderMD(this.body)
-    this.publishedAt = formatDate(this.publishedAt)
-    if (this.updatedAt) this.updatedAt = formatDate(this.updatedAt)
+  beforeMount() {
+    this.title = document.querySelector('#postTitle').innerHTML
+    this.body = renderMD(this.post.body)
   },
-  beforeMount() {},
+  methods: {
+    date(date) {
+      return formatDate(date)
+    },
+  },
   head() {
     return { title: `${this.title} | Andrés Del Carpio` }
   },
