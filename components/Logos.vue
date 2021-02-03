@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row">
+  <div class="flex flex-row my-8">
     <img src="/images/ruby.svg" alt="Ruby" title="Ruby" class="h-10 m-4" />
     <img
       src="/images/rails.svg"

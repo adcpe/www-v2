@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex flex-row justify-center content-end">
+  <footer class="flex flex-row justify-center content-end my-4">
     <a
       href="https://nuxtjs.org/"
       target="_blank"

@@ -1,12 +1,10 @@
 <template>
-  <div class="min-h-screen bg-bggray border-4 border-black rounded m-1">
-    <div class="min-h-full container-auto mx-auto">
-      <Navbar />
-      <main>
-        <Nuxt />
-      </main>
-      <Footer />
-    </div>
+  <div
+    class="min-h-screen flex flex-col container-auto mx-auto bg-bggray border-4 border-black rounded m-1"
+  >
+    <Navbar />
+    <Nuxt />
+    <Footer />
   </div>
 </template>
 

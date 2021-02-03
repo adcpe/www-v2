@@ -1,6 +1,8 @@
 <template>
-  <div class="container-sm font-lato flex flex-col justify-center items-center">
-    <div class="h-96 w-3/4 flex flex-col justify-center items-start">
+  <div
+    class="container-sm min-h-full font-lato flex-1 flex flex-col place-content-center items-center"
+  >
+    <div class="w-3/4">
       <h1 class="text-4xl m-3">
         I'm
         <span class="font-titillium font-bold text-name"
