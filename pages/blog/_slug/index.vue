@@ -2,9 +2,9 @@
   <div class="post">
     <h1 id="postTitle">{{ post.title }}</h1>
     <p>
-      <b>Posted</b> {{ date(post.publishedOn) }}
+      <b>Posted</b> {{ formatDate(post.publishedOn) }}
       <span v-if="post.updatedAt">
-        <b>Updated</b> {{ date(post.updatedOn) }}
+        <b>Updated</b> {{ formatDate(post.updatedOn) }}
       </span>
     </p>
     <div class="md" v-html="body" />
@@ -34,9 +34,7 @@ export default {
     this.body = renderMD(this.post.body)
   },
   methods: {
-    date(date) {
-      return formatDate(date)
-    },
+    formatDate: (date) => formatDate(date),
   },
   head() {
     return { title: `${this.title} | Andrés Del Carpio` }
