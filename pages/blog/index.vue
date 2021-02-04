@@ -26,7 +26,7 @@ import formatDate from '../../plugins/formatDate'
 
 export default {
   async asyncData({ $sanity }) {
-    const query = groq`*[_type == 'post'] {title, 'slug': slug.current, publishedOn, updatedOn} | order(publishedOn desc)`
+    const query = groq`*[_type == 'post' && isPublished == true] {title, 'slug': slug.current, publishedOn, updatedOn} | order(publishedOn desc)`
     const posts = await $sanity.fetch(query)
 
     return { posts }
