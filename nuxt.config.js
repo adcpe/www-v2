@@ -21,6 +21,10 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
+  loading: {
+    color: '#f48498',
+    height: '2px',
+  },
   styleResources: {
     scss: ['./assets/styles/*.scss'],
   },
