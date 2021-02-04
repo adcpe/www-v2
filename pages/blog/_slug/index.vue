@@ -37,7 +37,7 @@ export default {
     formatDate: (date) => formatDate(date),
   },
   head() {
-    return { title: `${this.title} | Andrés Del Carpio` }
+    return { title: `${this.title} | Andrés Del Carpio | Full Stack Developer` }
   },
 }
 </script>

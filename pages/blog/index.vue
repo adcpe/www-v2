@@ -34,5 +34,8 @@ export default {
   methods: {
     formatDate: (date) => formatDate(date),
   },
+  head() {
+    return { title: 'Blog | Andrés Del Carpio | Full Stack Developer' }
+  },
 }
 </script>

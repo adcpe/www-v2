@@ -9,7 +9,7 @@ export default {
   },
   target: 'static',
   head: {
-    title: 'Andrés Del Carpio',
+    title: 'Andrés Del Carpio | Full Stack Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
