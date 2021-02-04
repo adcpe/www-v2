@@ -16,7 +16,9 @@
       </a>
     </div>
     <div>
-      <a href="mailto:hey@andresdc.net">hey@andresdc.net</a>
+      <a class="hover:text-links" href="mailto:hey@andresdc.net">
+        hey@andresdc.net
+      </a>
     </div>
   </footer>
 </template>
@@ -37,14 +39,14 @@ export default {
           icon: 'gitlab',
         },
         {
-          url: 'https://twitter.com/Andres__DC',
-          title: 'Twitter',
-          icon: 'twitter',
-        },
-        {
           url: 'https://www.linkedin.com/in/andres-dc/',
           title: 'Linkedin',
           icon: 'linkedin',
+        },
+        {
+          url: 'https://twitter.com/Andres__DC',
+          title: 'Twitter',
+          icon: 'twitter',
         },
       ],
     }
