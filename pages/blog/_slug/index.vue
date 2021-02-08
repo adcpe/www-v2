@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .post {
   @apply lg:w-1/2 my-2 lg:mx-auto mx-4 text-base;
 
