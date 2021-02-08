@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-full font-lato flex-1">
-    <h1 class="text-4xl font-bold text-center my-10">Latest Blog Posts</h1>
+    <h1 class="text-4xl font-bold text-center my-10">Blog Posts</h1>
     <div class="w-1/2 m-auto flex flex-col justify-center content-center">
       <nuxt-link
         v-for="(post, i) in posts"

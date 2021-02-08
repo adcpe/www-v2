@@ -10,8 +10,7 @@
         >
       </h1>
       <p class="font-lato text-xl m-3">
-        I'm a full-stack developer. I write about things that interest me and I
-        hope that they can be helpful to others.
+        Full-stack developer, student &#38; technical writer.
       </p>
     </div>
     <Logos />
