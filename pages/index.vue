@@ -9,7 +9,7 @@
           >Andrés Del Carpio</span
         >
       </h1>
-      <p class="font-lato text-xl m-3">
+      <p class="text-xl m-3">
         Full-stack developer, student &#38; technical writer.
       </p>
     </div>
