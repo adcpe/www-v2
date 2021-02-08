@@ -42,43 +42,74 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post {
-  margin: 2rem auto;
-  width: 768px;
+  @apply lg:w-1/2 my-2 lg:mx-auto mx-4 text-base;
+
+  & > h1,
+  & > p {
+    @apply text-center my-2 mx-auto;
+  }
 
   & > h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    @apply font-bold text-5xl;
   }
 
   & > p {
-    text-align: center;
-    margin: 0 0 2rem;
-  }
-}
-
-.md {
-  text-align: left;
-
-  * {
-    margin: 1rem auto;
+    @apply text-sm;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1.5rem;
-    font-weight: bold;
+  a {
+    @apply text-blue-500;
+
+    &:hover {
+      @apply text-links;
+    }
   }
 
-  pre {
-    width: 90%;
+  .md {
+    @apply text-left;
+
+    * {
+      @apply my-4 mx-auto;
+    }
+
+    h1 {
+      @apply text-5xl;
+    }
+
+    h2 {
+      @apply text-4xl;
+    }
+
+    h3 {
+      @apply text-3xl;
+    }
+
+    h4 {
+      @apply text-2xl;
+    }
+
+    h5 {
+      @apply text-xl;
+    }
+
+    h6 {
+      @apply text-lg;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply font-bold;
+    }
+
+    pre {
+      @apply w-11/12;
+    }
   }
 }
 </style>
