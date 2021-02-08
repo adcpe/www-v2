@@ -1,8 +1,13 @@
 <template>
   <footer
-    class="font-lato flex flex-row justify-between items-center mx-10 my-6"
+    class="font-lato flex flex-row flex-wrap justify-between items-center mx-10 my-6 md:justify-center"
   >
-    <div class="flex flex-row justify-center content-end my-6">
+    <div class="flex-grow text-center">
+      <a class="hover:text-links" href="mailto:hey@andresdc.net">
+        hey@andresdc.net
+      </a>
+    </div>
+    <div class="flex flex-row flex-grow justify-center content-end my-6">
       <a
         v-for="(link, i) in links"
         :key="i"
@@ -13,11 +18,6 @@
         class="mx-2"
       >
         <img class="h-6" :src="`/images/${link.icon}.svg`" :alt="link.title" />
-      </a>
-    </div>
-    <div>
-      <a class="hover:text-links" href="mailto:hey@andresdc.net">
-        hey@andresdc.net
       </a>
     </div>
   </footer>

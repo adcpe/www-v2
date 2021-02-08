@@ -1,8 +1,8 @@
 <template>
   <div
-    class="container-sm min-h-full font-lato flex-1 flex flex-col place-content-center items-center"
+    class="container-sm min-h-full font-lato flex-1 flex flex-col place-content-center items-center mx-10"
   >
-    <div class="w-3/4">
+    <div class="lg:w-1/2">
       <h1 class="text-3xl m-3">
         I'm
         <span class="font-titillium font-bold text-name"
